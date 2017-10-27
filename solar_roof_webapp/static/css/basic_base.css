@@ -1,0 +1,25 @@
+/*#navWrap {
+    height:70px;
+}
+nav {
+    height: 70px;
+    background:gray;
+}
+.sticky {
+    position: fixed;
+    top:0;
+}*/
+
+.container-fluid{
+  padding: 50px;
+}
+
+.logo {
+    font-size: 200px;
+}
+@media screen and (max-width: 768px) {
+    .col-sm-4 {
+        text-align: center;
+        margin: 25px 0;
+    }
+}
