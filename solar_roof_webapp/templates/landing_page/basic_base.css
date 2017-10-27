@@ -1,0 +1,11 @@
+#navWrap {
+    height:70px;
+}
+nav {
+    height: 70px;
+    background:gray;
+}
+.sticky {
+    position: fixed;
+    top:0;
+}
