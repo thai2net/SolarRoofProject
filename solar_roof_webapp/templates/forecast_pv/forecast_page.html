@@ -4,8 +4,22 @@
 {% block title %}{{title}}{% endblock %}
 
   {%block content%}
-
-
 <!-- Code here -->
-
+<table style="width: 1000px; margin-left: 20px; margin-top: 20px;" align="left">
+  <tr>
+    <td colspan="2">
+      Prapat Chaiyasuk<br />
+      Date: December 31, 2013
+    </td>
+  </tr>
+  <tr>
+    <td><svg id="pv_production" width="500" height="300"></svg></td>
+    <td><svg id="pv_load" width="500" height="300"></svg></td>
+  </tr>
+  <tr>
+    <td><svg id="pv_battery" width="500" height="300"></svg></td>
+    <td><svg id="pv_difference" width="500" height="300"></svg></td>
+  </tr>
+</table>
+<script type="text/javascript" src='{%static "javascript/forecast_pv.js"%}'></script>
   {%endblock%}
