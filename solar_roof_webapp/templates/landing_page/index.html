@@ -25,7 +25,7 @@
       <div class="carousel-item">
         <img class="d-block img-fluid" src="{%static 'images/powerwall_1.jpg'%}" alt="Second slide">
         <div class="carousel-caption d-none d-md-block">
-          <div class='sliderBasic' style='background-color:#22264b'>
+          <div class='sliderBasic' style='background-color:rgba(219,178,107,0.6)'>
             <h3>Battery</h3>
             <p>Advantages of Battery</p>
           </div>
@@ -52,77 +52,87 @@
   </div>
 
 <!-- Information section -->
-  <div class="container-fluid fademe" style='opacity:0; padding-left:100px; padding-top:100px; padding-bottom:100px;'>
+  <div class="container-fluid fademe" style='opacity:0; padding-left:100px; padding-right:50px; padding-top:70px; padding-bottom:70px;'>
     <div class="row">
-      <div class="col-sm-6">
-        <h2>About Clean Energy</h2>
-        <p>It will increase countries’ energy security through reliance on an indigenous, inexhaustible and mostly
+      <div class="col-sm-6" style='margin-top:50px'>
+        <h2>Advantages of Solar Cell and Battery</h2>
+        <p style='padding-right:50px;'>It will increase countries’ energy security through reliance on an indigenous, inexhaustible and mostly
           import-independent resource, enhance sustainability, reduce pollution, lower the costs of mitigating global warming,
           and keep fossil fuel prices lower than otherwise. These advantages are global.</p>
         <button class="btn btn-default btn-lg">Learn More</button>
       </div>
       <div class="col-sm-6">
         <span class="glyphicon glyphicon-align-right logo" aria-hidden="true">
-          <img class="d-block img-fluid" src="{%static 'images/powerwall_1.jpg'%}" alt="First slide">
+          <img class="d-block img-fluid" src="{%static 'images/industry-solution.jpg'%}" alt="First slide">
         </span>
       </div>
     </div>
   </div>
 
-  <div class="container-fluid bg-dark fademe" style='opacity:0; color:#e6e9ef; padding-top:100px; padding-bottom:100px;'>
+  <div class="container-fluid bg-dark fademe" style='opacity:0; color:#e6e9ef; padding-top:70px; padding-bottom:70px;'>
     <div class="row">
       <div class="col-sm-6">
-        <img class="d-block img-fluid" src="{%static 'images/powerwall_1.jpg'%}" alt="Cannot Display Images">
+        <img class="d-block img-fluid" src="{%static 'images/partner-of-us.png'%}" alt="Cannot Display Images">
       </div>
-      <div class="col-sm-6">
-        <h2>About Solar Panel</h2>
-        <h4><strong>MISSION:</strong> Our mission lorem ipsum..</h4>
-        <p><strong>VISION:</strong> Our vision Lorem ipsum..</p>
-        <button class="btn btn-default btn-lg">Learn More</button>
+      <div class="col-sm-6" style='margin-top:50px'>
+        <h2>Our Goal</h2>
+        <ul>
+          <li><h6>Easy Installation and Maintenance</h6></li>
+          <li><h6>Efficiency maximize</h6></li>
+          <li><h6>Environment friendly</h6></li>
+          <li><h6>Easy to use</h6></li>
+        </ul>
       </div>
     </div>
   </div>
 
-  <div class="container-fluid fademe" style='opacity:0; background-color: #e6eaf2; padding-left:100px; padding-top:100px; padding-bottom:100px;'>
+  <div class="container-fluid fademe" style='opacity:0; background-color: #e6eaf2; padding-left:100px; padding-top:70px; padding-bottom:70px;'>
     <div class="row">
-      <div class="col-sm-6">
-        <h2>About Battery</h2>
-        <p>lo</p>
-        <button class="btn btn-primary btn-lg">Learn More</button>
+      <div class="col-sm-6" style='margin-top:50px'>
+        <h2>Our Missions</h2>
+        <h4>One stop service for solar energy solution</h4>
+        <ul>
+          <li>Optimize solar PV and Battery Sizing</li>
+          <li>Recommend Solar Energy Solution</li>
+          <li>Monitoring and Maintenance Services</li>
+        </ul>
       </div>
       <div class="col-sm-6">
-        <img class="d-block img-fluid" src="{%static 'images/powerwall_1.jpg'%}" alt="First slide">
+        <img class="d-block img-fluid" src="{%static 'images/home-solution.jpg'%}" alt="First slide">
       </div>
     </div>
   </div>
 <!-- Services -->
-  <div class="container-fluid text-center fademe" style='opacity:0; padding:50px;'>
-    <h2>SERVICES</h2>
-    <h4>What we offer</h4>
-    <br>
-    <div class="row">
-      <div class="col-sm-4" style='border:2px black solid; padding:0px'>
-        <span class="glyphicon glyphicon-off"></span>
-        <h4>Solar Planner</h4>
-        <p>Lorem ipsum dolor sit amet..</p>
+  <div class="container-fluid text-center fademe" style='opacity:0; padding:50px; margin-bottom:0px'>
+    <h2>SOLUTIONS</h2>
+    <h4>in DigiSolar</h4>
+  </div>
+
+  <div class="card-deck" style='margin:auto; margin-bottom:50px; margin-top:0px padding:50px'>
+    <div class="card" style='background-color:#dddcdc;'>
+      <a href="{% url 'optimal:optimal_page'%}"><img class="card-img-top" src="{%static 'images/solar-planner.jpg'%}" alt="Card image cap"></a>
+      <div class="card-block" style='padding:20px'>
+        <h4 class="card-title">Solar Planner</h4>
+        <p class="card-text">Optimal sizing of solar cell and battery for interested customer</p>
       </div>
-      <div class="col-sm-4" style='border:2px black solid; padding:0px'>
-        <span class="glyphicon glyphicon-heart"></span>
-        <h4>Solar Forecast</h4>
-        <p>Lorem ipsum dolor sit amet..</p>
+    </div>
+    <div class="card" style='background-color:#dddcdc;'>
+      <a href="{% url 'forecast:forecast_page'%}"><img class="card-img-top" src="{%static 'images/solar-planner.jpg'%}" alt="Card image cap"></a>
+      <div class="card-block" style='padding:20px'>
+        <h4 class="card-title">Solar Forecast</h4>
+        <p class="card-text">
+          Accurate solar power forecasting is one of the key tools to mitigate
+          challenges created by intermittent nature of energy generation from solar power systems.
+        </p>
       </div>
-      <div class="col-sm-4" style='border:2px black solid; padding:0px'>
-        <span class="glyphicon glyphicon-lock"></span>
-        <h4>Monitoring</h4>
-        <p>Lorem ipsum dolor sit amet..</p>
-      </div>
-      </div>
-      <br><br>
-    <div class="row">
-      <div class="col-sm-4" style='margin:auto;'>
-        <span class="glyphicon glyphicon-leaf"></span>
-        <h4>API</h4>
-        <p>Lorem ipsum dolor sit amet..</p>
+    </div>
+    <div class="card" style='background-color:#dddcdc;'>
+      <img class="card-img-top" src="{%static 'images/solar-planner.jpg'%}" alt="Card image cap">
+      <div class="card-block" style='padding:20px'>
+        <h4 class="card-title">Monitoring</h4>
+        <p class="card-text">Monitoring solutions make PV monitoring workflows more efficient
+          and data analysis more reliable. Traditionally the solar industry has relied
+          primarily on solar sensors for collecting weather data necessary for performance monitoring of PV systems. </p>
       </div>
     </div>
   </div>
@@ -130,14 +140,12 @@
 <!-- Out partners -->
   <div class="container-fluid text-center fademe" style='opacity:0; padding:50px; margin-bottom:50px; background-color: #e6eaf2;'>
     <h2>Our partners</h2>
-    <h4>Including vendors and maintenance service supplier</h4>
     <div class="row text-center" style='margin-top:70px; margin-left:50px; margin-right:50px;'>
       <div class="col-sm-4">
         <div class="card" style="width: 20rem;">
           <img src="paris.jpg" alt="Schneider">
             <div class="card-block">
               <p><strong>Schneider</strong></p>
-              <p>Yes, we built Paris</p>
             </div>
         </div>
       </div>
@@ -145,8 +153,7 @@
         <div class="card" style="width: 20rem;">
           <img src="newyork.jpg" alt="Precise">
           <div class="card-block">
-            <p><strong>Schneider</strong></p>
-            <p>Yes, we built Paris</p>
+            <p><strong>Precise</strong></p>
           </div>
         </div>
       </div>
@@ -154,8 +161,7 @@
         <div class="card" style="width: 20rem;">
             <img src="sanfran.jpg" alt="General Electric">
               <div class="card-block">
-                <p><strong>Schneider</strong></p>
-                <p>Yes, we built Paris</p>
+                <p><strong>General Electric</strong></p>
               </div>
           </div>
         </div>
@@ -168,9 +174,9 @@
     <div class="row">
       <div class="col-sm-5" style='padding-left: 6%;'>
         <p>Contact us and we'll get back to you within 24 hours.</p>
-        <p><span class="glyphicon glyphicon-map-marker"></span> Chicago, US</p>
+        <p><span class="glyphicon glyphicon-map-marker"></span> Thailand</p>
         <p><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
-        <p><span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p>
+        <p><span class="glyphicon glyphicon-envelope"></span> thewatch8@gmail.com</p>
       </div>
 
       <!-- Receive Contact Form -->

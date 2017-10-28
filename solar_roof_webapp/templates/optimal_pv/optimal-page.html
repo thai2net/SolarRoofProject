@@ -4,14 +4,162 @@
 {% block title %}{{title}}{% endblock %}
 
   {%block content%}
-  <br>
-  <form method="post">
-    {{form.as_p}}
-    {%csrf_token%}
-    <input type="submit" name="" value="">
-  </form>
+  <div class="container text-center" style='margin-top:20px; padding:0px; background-color:	#dddcdc'>
+    <div class="jumbotron" style='padding-top:20px; padding-bottom:20px'>
 
-  {%if bill%}
-    <h1>{{bill}}</h1>
-  {%endif%}
+      <h1>Solar Planner</h1>
+      <p>We provide optimization tool to calculate optimal solar cell and battery size, <br>
+      and help you get your solar with very few steps.</p>
+
+    </div>
+  </div>
+
+  <!-- Identify sizing for residential customers -->
+  <div class="container-fluid text-center" style='background-color:#eeeeee; margin-bottom:0px; padding-top:20px;'>
+    <h3>1. Calculate the size of your solar and Battery</h3><br>
+    <h5>for residential customers who doesn't own digital meter</h5>
+    <div class="jumbotron" style='padding-top:20px'>
+      <form class='clear' method="post">
+        {{ form.non_field_errors }}
+        <div class="fieldWrapper">
+            {{ form.bill.errors }}
+            <label for="{{ form.subject.id_for_label }}">Energy Consumption [kWh, Unit]:</label>
+            <br>
+            {{ form.bill }}
+        </div>
+        <div class="fieldWrapper">
+            {{ form.houseSize.errors }}
+            <label for="{{ form.message.id_for_label }}">Roof Size [Sq m.]:</label>
+            <br>
+            {{ form.houseSize }}
+        </div>
+        {%csrf_token%}
+        <input type="submit" class='btn btn-primary' value="Calculate" style='margin-top:20px' onClick="document.getElementById('sendinfo').scrollIntoView();">
+      </form>
+
+      {%if pv_size%}
+      <div class="card-deck" style='margin:auto; margin-bottom:0px; margin-top:30px; padding-left:15%; padding-right:15%'>
+        <div class="card" style='background-color:#dddcdc; padding:5px'>
+          <h4>Optimal PV Size</h4>
+          <div class="card-block" style='padding:0px'>{{pv_size|floatformat:2}} kWp</div>
+        </div>
+        <div class="card" style='background-color:#dddcdc; padding:5px'>
+          <h4>Optimal Battery Size</h4>
+          <div class="card-block" style='padding:0px'>{{bess_kW|floatformat:2}} kW  {{bess_kWh|floatformat:2}} kWh</div>
+        </div>
+      </div>
+
+      <!-- Economic value -->
+      <div class="card-deck" style='margin:auto; margin-bottom:0px; margin-top:30px; padding-left:15%; padding-right:15%'>
+        <div class="card" style='background-color:#dddcdc; padding:5px'>
+          <h4>NPV</h4>
+          <div class="card-block" style='padding:0px'>{{NPV|floatformat:2}} Baht</div>
+        </div>
+        <div class="card" style='background-color:#dddcdc; padding:5px'>
+          <h4>IRR</h4>
+          <div class="card-block" style='padding:0px'>{{IRR|floatformat:2 }} %</div>
+        </div>
+      </div>
+      {%else%}
+        <h3>Cannot calculate optimal solutions</h3>
+      {%endif%}
+    </div>
+  </div>
+
+  <!--Buy a product from our partners -->
+  <div class="container-fluid text-center" style='margin-top:0px;'>
+
+    <div class="container" style='margin-bottom:20px'>
+        <h3>2. Choose a product from our partners</h3>
+        <div class="row text-center" style='margin-top:70px; margin-left:50px; margin-right:50px;'>
+          <div class="col-sm-4">
+            <a href="#">
+              <div class="card" style="width: 20rem;">
+                <img src="paris.jpg" alt="Schneider">
+                  <div class="card-block">
+                    <p><strong>Schneider</strong></p>
+                  </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-sm-4">
+            <a href="#">
+              <div class="card" style="width: 20rem;">
+                <img src="newyork.jpg" alt="Precise">
+                <div class="card-block">
+                  <p><strong>Precise</strong></p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-sm-4">
+              <a href="#">
+                <div class="card" style="width: 20rem;">
+                  <img src="sanfran.jpg" alt="General Electric">
+                    <div class="card-block">
+                      <p><strong>General Electric</strong></p>
+                    </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+    </div>
+
+  </div>
+
+  <!-- Order Now -->
+  <div class="container-fluid text-center" style='margin-top:0px; background-color:#eeeeee'>
+
+      <div id='sendinfo' class="container" style='margin-bottom:20px'>
+        <h3>3. Send your information to our partners</h3>
+    </div>
+      <!-- Receive Contact Form -->
+      <div class="col-sm-12" style = 'padding-left:15%; padding-right:15%'>
+        <form class="" action="index.html" method="post">
+            <div class="row">
+              <div class="col-sm-6 form-group">
+                <input class="form-control" id="name" name="fname" placeholder="First name" type="text" required>
+              </div>
+              <div class="col-sm-6 form-group">
+                <input class="form-control" id="name" name="lname" placeholder="Last name" type="text" required>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6 form-group">
+                <input class="form-control" id="name" name="email" placeholder="Email" type="email" required>
+              </div>
+              <div class="col-sm-6 form-group">
+                <input class="form-control" id="phone" name="phone" placeholder="Phone" type="number" required>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-12 form-group">
+                <input class="form-control" id="address" name="address" placeholder="Installation Address" type="text" required>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-12 form-group">
+                <input class="form-control btn-group-justified" id="address" name="address" placeholder="Credit Card Number" type="text" required>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-12 form-group">
+                <button class="btn expand-lg btn-default pull-right" type="submit">Send Information</button>
+              </div>
+            </div>
+        </form>
+      </div>
+  </div>
+
+  <div class="container-fluid text-center" style='margin-top:0px;>
+    <div class="container" style='margin-bottom:20px'>
+          <h3>What's next?</h3>
+          <p>Once you place your reservation, our partners energy specialist will reach out to discuss your project, <br>
+          and send your installation request to utility</p>
+    </div>
+  </div>
   {%endblock%}

@@ -40,7 +40,7 @@
   <body>
     <!-- Navigation Bar -->
     <nav id = 'navWrap' class='navbar sticky-top navbar-fixed-top navbar-expand-lg navbar-dark bg-dark'>
-      <a class="navbar-brand" href="{% url 'landing_page:index'%}">Brand Logo</a>
+      <a class="navbar-brand" href="{% url 'landing_page:index'%}"><img src="{%static 'images/digiSolar'%}" alt="DigiSolar"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -63,7 +63,7 @@
           <!-- About Products -->
           <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Products
+                Solutions
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="{% url 'optimal:optimal_page'%}">Solar Planner</a>
@@ -72,20 +72,21 @@
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#">Monitoring</a>
               </div>
-            </li>
-            <!-- About Solutions -->
+          </li>
+
           <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Solutions
+                Products
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Solar Planner</a>
+                <a class="dropdown-item" href="#">Home Solar Roof</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Solar Forecast</a>
+                <a class="dropdown-item" href="#">Industry Solar Roof</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Monitoring</a>
+                <a class="dropdown-item" href="#">Solar Farm</a>
               </div>
-            </li>
+          </li>
+
             <!--  -->
           <li class="nav-item">
             <a class="nav-link" href="#">About Us</a>
