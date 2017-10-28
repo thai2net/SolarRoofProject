@@ -1,14 +1,3 @@
-/*#navWrap {
-    height:70px;
-}
-nav {
-    height: 70px;
-    background:gray;
-}
-.sticky {
-    position: fixed;
-    top:0;
-}*/
 
 .container-fluid{
   padding: 50px;
@@ -17,9 +6,21 @@ nav {
 .logo {
     font-size: 200px;
 }
+
 @media screen and (max-width: 768px) {
     .col-sm-4 {
         text-align: center;
         margin: 25px 0;
     }
+}
+
+/*Adjust logo icon*/
+.logo-small {
+    color: #f4511e;
+    font-size: 50px;
+}
+
+.logo {
+    color: #f4511e;
+    font-size: 200px;
 }
