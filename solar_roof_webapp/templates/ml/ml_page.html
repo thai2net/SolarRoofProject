@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{%extends 'basic_base.html'%}
+{%load staticfiles%}
+{% block title %}{{title}}{% endblock %}
+
+  {%block content%}
+  <br>
+  <form class="" action="index.html" method="post">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="bill" name="bill" placeholder="Your last electricity bill" type="number" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="area" name="area" placeholder="House Size" type="number" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-default pull-right" type="submit">Send</button>
+        </div>
+      </div>
+  </form>
+  {%endblock%}

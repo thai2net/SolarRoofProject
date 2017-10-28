@@ -4,5 +4,14 @@
 {% block title %}{{title}}{% endblock %}
 
   {%block content%}
-  
+  <br>
+  <form method="post">
+    {{form.as_p}}
+    {%csrf_token%}
+    <input type="submit" name="" value="">
+  </form>
+
+  {%if bill%}
+    <h1>{{bill}}</h1>
+  {%endif%}
   {%endblock%}
