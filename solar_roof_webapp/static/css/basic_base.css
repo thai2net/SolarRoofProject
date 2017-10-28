@@ -24,3 +24,13 @@
     color: #f4511e;
     font-size: 200px;
 }
+
+.sliderBasic{
+  background-color:rgba(106, 113, 124, 0.8);
+  padding-top:5px;
+  padding-bottom:5px;
+  padding-left: 100px;
+  padding-right:100px;
+  width:600px;
+  margin:auto;
+}
