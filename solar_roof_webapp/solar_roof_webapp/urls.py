@@ -18,5 +18,6 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', include('landing_page.urls'))
+    url(r'^$', include('landing_page.urls')),
+    url(r'^solar_planner', include('optimal_pv.urls'))
 ]
