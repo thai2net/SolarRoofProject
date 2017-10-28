@@ -15,9 +15,8 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
-from landing_page import views as landing_views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', landing_views.index)
+    url(r'^$', include('landing_page.urls'))
 ]

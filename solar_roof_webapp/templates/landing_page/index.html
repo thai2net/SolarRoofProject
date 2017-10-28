@@ -46,7 +46,7 @@
   </div>
 
 <!-- Information section -->
-  <div class="container-fluid" style='padding-left:100px; padding-top:100px; padding-bottom:100px;'>
+  <div class="container-fluid fademe" style='opacity:0; padding-left:100px; padding-top:100px; padding-bottom:100px;'>
     <div class="row">
       <div class="col-sm-6">
         <h2>About Clean Energy</h2>
@@ -62,7 +62,7 @@
     </div>
   </div>
 
-  <div class="container-fluid bg-dark" style='color:#e6e9ef; padding-top:100px; padding-bottom:100px;'>
+  <div class="container-fluid bg-dark fademe" style='opacity:0; color:#e6e9ef; padding-top:100px; padding-bottom:100px;'>
     <div class="row">
       <div class="col-sm-6">
         <img class="d-block img-fluid" src="{%static 'images/powerwall_1.jpg'%}" alt="Cannot Display Images">
@@ -76,7 +76,7 @@
     </div>
   </div>
 
-  <div class="container-fluid" style='background-color: #e6eaf2; padding-left:100px; padding-top:100px; padding-bottom:100px;'>
+  <div class="container-fluid fademe" style='opacity:0; background-color: #e6eaf2; padding-left:100px; padding-top:100px; padding-bottom:100px;'>
     <div class="row">
       <div class="col-sm-6">
         <h2>About Clean Energy</h2>
@@ -89,9 +89,8 @@
       </div>
     </div>
   </div>
-
 <!-- Services -->
-  <div class="container-fluid text-center" style='padding:50px;'>
+  <div class="container-fluid text-center fademe" style='opacity:0; padding:50px;'>
     <h2>SERVICES</h2>
     <h4>What we offer</h4>
     <br>
@@ -123,10 +122,10 @@
   </div>
 
 <!-- Out partners -->
-  <div class="container-fluid text-center" style='padding:50px; margin-bottom:50px; background-color: #e6eaf2;'>
+  <div class="container-fluid text-center fademe" style='opacity:0; padding:50px; margin-bottom:50px; background-color: #e6eaf2;'>
     <h2>Our partners</h2>
     <h4>Including vendors and maintenance service supplier</h4>
-    <div class="row" style='margin-top:70px; margin-left:50px; margin-right:50px;'>
+    <div class="row text-center" style='margin-top:70px; margin-left:50px; margin-right:50px;'>
       <div class="col-sm-4">
         <div class="card" style="width: 20rem;">
           <img src="paris.jpg" alt="Schneider">
@@ -191,6 +190,12 @@
     </div>
   </div>
 
+  <footer class="container-fluid text-center">
+    <a href="{% url 'landing_page:index'%}" title="To Top">
+      <span class="carousel-control-prev-icon" aria-hidden="false"></span>
+      <p>Top</p>
+    </a>
+  </footer>
   <!-- Add google map -->
   <!-- Add Google Maps -->
 <!-- <div id="googleMap" style="height:400px;width:100%;"></div> -->
