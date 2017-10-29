@@ -5,21 +5,34 @@
 
   {%block content%}
 <!-- Code here -->
-<table style="width: 1000px; margin-left: 20px; margin-top: 20px;" align="left">
-  <tr>
-    <td colspan="2">
-      Prapat Chaiyasuk<br />
-      Date: December 31, 2013
-    </td>
-  </tr>
-  <tr>
-    <td><svg id="pv_production" width="500" height="300"></svg></td>
-    <td><svg id="pv_load" width="500" height="300"></svg></td>
-  </tr>
-  <tr>
-    <td><svg id="pv_battery" width="500" height="300"></svg></td>
-    <td><svg id="pv_difference" width="500" height="300"></svg></td>
-  </tr>
-</table>
+<div class="container " style='margin-left:2%; margin-right:5%'>
+  <div class="jumbotron text-center" style='padding:40px'>
+    <h2>Solar Forecast</h2>
+    <p>One of the challenges for development of solar power is its intermittent nature.
+      Accurate solar power forecasting is one of the key tools to mitigate challenges
+      created by intermittent nature of energy generation from solar power systems.</p>
+
+    <p>DigiSolar makes use of Deep Neural Network (LSTM) models to provide solar forecasting
+      solutions for a multitude of applications. We offer intraday and days-ahead forecasts for individual
+      PV power plants or distributed solar power systems.</p>
+
+  </div>
+  <table style="width: 1000px; margin-left: 20px; margin-top: 00px;" align="left">
+    <tr>
+      <td colspan="2">
+        Prapat Chaiyasuk<br />
+        Date: December 31, 2013
+      </td>
+    </tr>
+    <tr>
+      <td><svg id="pv_production" width="500" height="300"></svg></td>
+      <td><svg id="pv_load" width="500" height="300"></svg></td>
+    </tr>
+    <tr>
+      <td><svg id="pv_battery" width="500" height="300"></svg></td>
+      <td><svg id="pv_difference" width="500" height="300"></svg></td>
+    </tr>
+  </table>
+</div>
 <script type="text/javascript" src='{%static "javascript/forecast_pv.js"%}'></script>
   {%endblock%}
